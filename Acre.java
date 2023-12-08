@@ -57,4 +57,23 @@ public class Acre{
     return result;
     
   }
+  public String toString(){
+
+    if(crop == "No Crops"){
+
+      return "\tNo Crops";
+      
+    }
+    else{
+
+      return "\tCrop: "+crop+"\tSell Price: $"+sellPrice+"\tBuy Price: $"+growPrice+"\nDays to Harvest: "+harvestDays;
+      
+    }
+    
+  }
+  public boolean getCrops(){
+
+    return crops;
+    
+  }
 }
