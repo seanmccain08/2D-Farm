@@ -53,20 +53,22 @@ public class Acre{
     double result = sellPrice-growPrice;
     double harvestAmount = days/harvestDays;
     result*=harvestAmount;
-    Math.floor(result);
+    int temp = (int)(result*100);
+    result = temp;
+    result = result/100;
     return result;
     
   }
   public String toString(){
 
-    if(crop == "No Crops"){
+    if(crops == false){
 
       return "\tNo Crops";
       
     }
     else{
 
-      return "\tCrop: "+crop+"\tSell Price: $"+sellPrice+"\tBuy Price: $"+growPrice+"\nDays to Harvest: "+harvestDays;
+      return "\tCrop: "+crop+"\tSell Price: $"+sellPrice+"\tBuy Price: $"+growPrice+"\tDays to Harvest: "+harvestDays;
       
     }
     
@@ -74,6 +76,12 @@ public class Acre{
   public boolean getCrops(){
 
     return crops;
+    
+  }
+  public void setBad(){
+
+    crops = false;
+    crop = "No Crops";
     
   }
 }
